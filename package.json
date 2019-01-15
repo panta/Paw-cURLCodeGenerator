@@ -1,5 +1,5 @@
 {
-  "name": "Paw-cURLCodeGenerator",
+  "name": "Paw-cURLWinCodeGenerator",
   "version": "1.0.0",
   "devDependencies": {
     "coffee-script": "latest",
@@ -12,6 +12,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:luckymarmot/Paw-cURLCodeGenerator.git"
+    "url": "git@github.com:panta/Paw-cURLCodeGenerator.git"
   }
 }

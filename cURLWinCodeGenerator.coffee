@@ -2,13 +2,17 @@
 ((root) -> root.Mustache = require("mustache.js") or root.Mustache)(this)
 ((root) -> root.Base64 = require("Base64.js") or root.Base64)(this)
 
-addslashes = (str) ->
+_o_addslashes = (str) ->
     ("#{str}").replace(/[\\"]/g, '\\$&')
 
-addslashes_single_quotes = (str) ->
+_o_addslashes_single_quotes = (str) ->
     ("#{str}").replace(/\\/g, '\\$&').replace(/'/g, "'\"'\"'")
 
-cURLCodeGenerator = ->
+addslashes = _o_addslashes
+
+addslashes_single_quotes = _o_addslashes
+
+cURLWinCodeGenerator = ->
     self = this
 
     @headers = (request) ->
@@ -160,14 +164,14 @@ cURLCodeGenerator = ->
     return
 
 
-cURLCodeGenerator.identifier =
-    "com.luckymarmot.PawExtensions.cURLCodeGenerator"
-cURLCodeGenerator.title =
-    "cURL"
-cURLCodeGenerator.fileExtension = "sh"
-cURLCodeGenerator.languageHighlighter = "bash"
-cURLCodeGenerator.inputs = [
+cURLWinCodeGenerator.identifier =
+    "com.luckymarmot.PawExtensions.cURLWinCodeGenerator"
+cURLWinCodeGenerator.title =
+    "cURL (Windows)"
+cURLWinCodeGenerator.fileExtension = "sh"
+cURLWinCodeGenerator.languageHighlighter = "bash"
+cURLWinCodeGenerator.inputs = [
     new InputField("useHeader", "do not use -u option", "Checkbox", {defaultValue: false})
 ]
 
-registerCodeGenerator cURLCodeGenerator
+registerCodeGenerator cURLWinCodeGenerator

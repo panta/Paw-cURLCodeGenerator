@@ -3,8 +3,8 @@
 mkdirp = require 'mkdirp'
 fs = require 'fs'
 
-file = 'cURLCodeGenerator.coffee'
-identifier = 'com.luckymarmot.PawExtensions.cURLCodeGenerator'
+file = 'cURLWinCodeGenerator.coffee'
+identifier = 'com.luckymarmot.PawExtensions.cURLWinCodeGenerator'
 
 extensions_dir = "#{ process.env.HOME }/Library/Containers/com.luckymarmot.Paw/Data/Library/Application Support/com.luckymarmot.Paw/Extensions/"
 build_root_dir = "build"
